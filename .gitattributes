@@ -1,0 +1,61 @@
+# Pigeon Studios Git attributes
+# Normalise line endings to LF in the repository, whatever the contributor's OS.
+* text=auto eol=lf
+
+# Windows scripts keep CRLF.
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Language hints for GitHub/GitLab statistics and diffs.
+*.lua  text
+*.sql  text
+*.md   text diff=markdown
+
+# Images, audio, video and fonts.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.dds  binary
+*.ogg  binary
+*.mp3  binary
+*.wav  binary
+*.mp4  binary
+*.webm binary
+*.ttf  binary
+*.otf  binary
+*.woff binary
+*.woff2 binary
+
+# GTA V / FiveM streamed assets.
+*.ytd  binary
+*.yft  binary
+*.ydr  binary
+*.ydd  binary
+*.ybn  binary
+*.ymap binary
+*.ytyp binary
+*.ycd  binary
+*.ynv  binary
+*.awc  binary
+*.rpf  binary
+*.gfx  binary
+
+# Archives.
+*.zip  binary
+*.7z   binary
+*.rar  binary
+
+# Keep these out of "git archive" release zips.
+.github/          export-ignore
+.gitlab/          export-ignore
+.gitattributes    export-ignore
+.gitignore        export-ignore
+.editorconfig     export-ignore
+docs/INTERNAL.md  export-ignore
+
+# Development files, not needed on a server.
+tests/           export-ignore

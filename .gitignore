@@ -1,0 +1,42 @@
+# Pigeon Studios .gitignore
+
+# Secrets and local configuration: never commit these.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output
+dist/
+build/
+*.zip
+
+# Logs and runtime data
+logs/
+*.log
+*.pid
+cache/
+
+# Database dumps and backups
+*.sql.gz
+*.dump
+backups/
+
+# Editors and operating systems
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

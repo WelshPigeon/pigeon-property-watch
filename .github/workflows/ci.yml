@@ -1,0 +1,78 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lua:
+    name: Lua tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Lua 5.4
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.4
+
+      - name: Check every Lua file compiles
+        run: |
+          for file in $(git ls-files '*.lua'); do
+            luac5.4 -p "$file" || exit 1
+          done
+
+      - name: Core tests
+        run: lua5.4 tests/core.test.lua
+
+      - name: Resource tests
+        run: lua5.4 tests/resource.test.lua
+
+      - name: Manifest version matches the latest changelog entry
+        run: |
+          manifest=$(sed -n "s/^version '\(.*\)'$/\1/p" fxmanifest.lua)
+          changelog=$(grep -m1 -oP '^## \[\K[0-9][^]]*' CHANGELOG.md)
+          echo "fxmanifest.lua: $manifest  CHANGELOG.md: $changelog"
+          [ "$manifest" = "$changelog" ]
+
+  sql:
+    name: SQL tests (MariaDB ${{ matrix.mariadb }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mariadb: ['10.6', '11.4']
+    services:
+      mariadb:
+        image: mariadb:${{ matrix.mariadb }}
+        env:
+          MARIADB_ROOT_PASSWORD: test
+        ports: ['3306:3306']
+        options: >-
+          --health-cmd="healthcheck.sh --connect --innodb_initialized || mysqladmin ping -ptest"
+          --health-interval=5s --health-timeout=5s --health-retries=20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Lua 5.4
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq lua5.4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Export the resource's queries
+        run: lua5.4 tests/dump-queries.lua > queries.json
+
+      - name: Install the MySQL client for Node
+        run: npm install --no-save --no-package-lock mysql2@3.11.3
+
+      - name: Run the queries against MariaDB
+        env:
+          DB_HOST: 127.0.0.1
+          DB_USER: root
+          DB_PASSWORD: test
+        run: node tests/sql.test.mjs

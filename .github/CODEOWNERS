@@ -1,0 +1,7 @@
+# Pigeon Studios code owners
+# Every change to this repository needs review from the owner below.
+# GitHub: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# GitLab: code owners need GitLab Premium, so on the Free plan this file has no effect there.
+#         If the group is upgraded, copy it to .gitlab/CODEOWNERS.
+
+* @WelshPigeon
