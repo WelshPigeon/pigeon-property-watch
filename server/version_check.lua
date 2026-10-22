@@ -1,6 +1,6 @@
 --[[
     Pigeon Studios update checker · v2.0.0
-    https://github.com/WelshPigeon/pigeon-versions
+    https://github.com/pigeon-studios-uk/pigeon-versions
 
     Tells the server owner, once when the resource starts, whether a newer release is available.
     Copy this file into the resource's server/ folder unchanged, and add it to server_scripts.
@@ -20,7 +20,7 @@
 
 do
     local CHECKER_VERSION = '2.0.0'
-    local REGISTRY_URL = 'https://raw.githubusercontent.com/WelshPigeon/pigeon-versions/main/api/v2/%s.json'
+    local REGISTRY_URL = 'https://raw.githubusercontent.com/pigeon-studios-uk/pigeon-versions/main/api/v2/%s.json'
     local SUPPORTED_SCHEMA = 2
     local MAX_HIGHLIGHTS = 3
     local START_DELAY_MS = { 2000, 6000 }  -- spread out so several Pigeon resources don't all print at once

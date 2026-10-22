@@ -4,14 +4,14 @@
   <p><strong>Finds properties nobody has used for weeks and reports them to Discord, for NoLag Properties and Qbox properties.</strong></p>
 
   <p>
-    <a href="https://github.com/WelshPigeon/pigeon-property-watch/releases/latest"><img src="https://img.shields.io/github/v/release/WelshPigeon/pigeon-property-watch?label=release&color=2ea043" alt="Latest release" /></a>
+    <a href="https://github.com/pigeon-studios-uk/pigeon-property-watch/releases/latest"><img src="https://img.shields.io/github/v/release/pigeon-studios-uk/pigeon-property-watch?label=release&color=2ea043" alt="Latest release" /></a>
     <a href="LICENSE.md"><img src="https://img.shields.io/badge/licence-Pigeon%20Studios%20Free-6f42c1" alt="Licence: Pigeon Studios Free Licence" /></a>
     <a href="https://discord.gg/2NFVWEUmDF"><img src="https://img.shields.io/badge/support-Discord-5865F2?logo=discord&logoColor=white" alt="Discord support" /></a>
     <img src="https://img.shields.io/badge/FiveM-resource-F40552" alt="FiveM resource" />
   </p>
 
   <p>
-    <a href="https://github.com/WelshPigeon/pigeon-property-watch/releases/latest"><strong>Download</strong></a> ·
+    <a href="https://github.com/pigeon-studios-uk/pigeon-property-watch/releases/latest"><strong>Download</strong></a> ·
     <a href="#installation">Install</a> ·
     <a href="#configuration">Configure</a> ·
     <a href="CHANGELOG.md">Changelog</a> ·
@@ -101,7 +101,7 @@ Warnings arrive as a separate amber message: "3 properties will count as inactiv
 
 ## Installation
 
-1. **Download** `pigeon-property-watch.zip` from the [latest release](https://github.com/WelshPigeon/pigeon-property-watch/releases/latest).
+1. **Download** `pigeon-property-watch.zip` from the [latest release](https://github.com/pigeon-studios-uk/pigeon-property-watch/releases/latest).
 2. **Extract** it into your `resources` folder. The folder must be called `pigeon-property-watch`.
 3. **Add your Discord webhook** to `server.cfg` (create it in your staff channel: **Edit Channel → Integrations → Webhooks**):
 
@@ -258,7 +258,7 @@ Set `Config.Locale` to a file in `locales/`. To add a language, copy `locales/en
 
 ## Update checker
 
-When it starts, Property Watch checks our public [version registry](https://github.com/WelshPigeon/pigeon-versions) once and prints one line in the server console. It sends nothing about your server. Control it for every Pigeon Studios resource in `server.cfg`:
+When it starts, Property Watch checks our public [version registry](https://github.com/pigeon-studios-uk/pigeon-versions) once and prints one line in the server console. It sends nothing about your server. Control it for every Pigeon Studios resource in `server.cfg`:
 
 ```cfg
 set pigeon_update_check "on"      # default
@@ -278,7 +278,7 @@ Property Watch does nothing between checks except record Qbox property visits, w
 - **Parameterised queries only.**
 - **Personal data.** Reports contain character names and identifiers of owners and keyholders, sent to your Discord channel. Keep it staff-only, and mention it in your server's privacy information. The tables store property IDs, owner identifiers and times only.
 
-Please report security problems privately. Use the **Report a vulnerability** button in this repository's **Security** tab, or follow our [Security Policy](https://github.com/WelshPigeon/.github/blob/main/SECURITY.md).
+Please report security problems privately. Use the **Report a vulnerability** button in this repository's **Security** tab, or follow our [Security Policy](https://github.com/pigeon-studios-uk/.github/blob/main/SECURITY.md).
 
 ## Troubleshooting
 
@@ -313,11 +313,11 @@ Not yet. If you'd like support for one, open a feature request with a link to th
 
 ## Support
 
-Read [Troubleshooting](#troubleshooting) first, then ask in the support channels of our [Discord](https://discord.gg/2NFVWEUmDF). Please include your housing resource and version, and the server console output. See [Getting help](https://github.com/WelshPigeon/.github/blob/main/SUPPORT.md).
+Read [Troubleshooting](#troubleshooting) first, then ask in the support channels of our [Discord](https://discord.gg/2NFVWEUmDF). Please include your housing resource and version, and the server console output. See [Getting help](https://github.com/pigeon-studios-uk/.github/blob/main/SUPPORT.md).
 
 ## Contributing
 
-Fixes, improvements and support for more housing systems are welcome. Please read the [contributing guide](https://github.com/WelshPigeon/.github/blob/main/CONTRIBUTING.md) first.
+Fixes, improvements and support for more housing systems are welcome. Please read the [contributing guide](https://github.com/pigeon-studios-uk/.github/blob/main/CONTRIBUTING.md) first.
 
 Tests run in plain Lua 5.4, and the SQL tests against MariaDB:
 

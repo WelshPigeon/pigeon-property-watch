@@ -35,7 +35,7 @@ In this licence:
 - **"Community"** means one roleplay, gaming or Discord community, organisation or project: one brand with one audience, even if it runs several Server instances.
 - **"Modification"** means any change to, translation of, or work based on the Software, in whole or in part.
 - **"Distribute"** means to make the Software, a Modification, or any substantial part of either, available to anyone else by any means. That includes uploading, mirroring, publishing a repository, sharing in Discord or on a forum, sending it in a file transfer, including it in a pack, or selling or giving it away. Making the Software available to players through a game Server you run, in the normal way FiveM and RedM stream resources to players, or letting people use a bot, website or service you run without giving them its files, is not Distributing.
-- **"Official Repository"** means the public repository this licence is published in, on the GitHub account WelshPigeon or in the GitLab group pigeon-studios, together with its releases, and any download link we publish on https://pigeonstudios.co.uk.
+- **"Official Repository"** means the public repository this licence is published in, in the GitHub organisation pigeon-studios-uk (previously the GitHub account WelshPigeon) or in the GitLab group pigeon-studios, together with its releases, and any download link we publish on https://pigeonstudios.co.uk.
 
 ## 2. Accepting this licence
 

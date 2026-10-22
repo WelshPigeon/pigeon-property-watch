@@ -6,7 +6,7 @@ name 'pigeon-property-watch'
 author 'Pigeon Studios'
 description 'Finds properties nobody has used for weeks and reports them to Discord, for NoLag Properties and Qbox properties.'
 version '1.0.0'
-repository 'https://github.com/WelshPigeon/pigeon-property-watch'
+repository 'https://github.com/pigeon-studios-uk/pigeon-property-watch'
 
 -- Pigeon Studios version registry entry, read by server/version_check.lua.
 pigeon_slug 'pigeon-property-watch'
