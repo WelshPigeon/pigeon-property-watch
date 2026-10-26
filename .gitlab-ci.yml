@@ -1,0 +1,12 @@
+# The shared checks (version, CHANGELOG, Lua syntax, README links, secrets): see
+# https://gitlab.com/pigeon-studios/tools/ci-templates
+include:
+  - project: pigeon-studios/tools/ci-templates
+    ref: v1.0.0
+    file: templates/checks.yml
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
