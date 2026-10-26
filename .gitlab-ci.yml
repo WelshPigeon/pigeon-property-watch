@@ -1,9 +1,15 @@
-# The shared checks (version, CHANGELOG, Lua syntax, README links, secrets): see
+# The shared checks (version, CHANGELOG, Lua syntax, README links, secrets) and release jobs:
 # https://gitlab.com/pigeon-studios/tools/ci-templates
 include:
   - project: pigeon-studios/tools/ci-templates
-    ref: v1.0.1
-    file: templates/checks.yml
+    ref: v1.1.0
+    file:
+      - templates/checks.yml
+      - templates/release.yml
+
+# free: publish to the registry, Discord and GitHub Discussions as soon as a tag passes.
+variables:
+  PS_RELEASE_KIND: free
 
 workflow:
   rules:
