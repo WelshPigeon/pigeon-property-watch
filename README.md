@@ -1,4 +1,6 @@
 <div align="center">
+  <img src=".github/banner.png" alt="Pigeon Property Watch" width="100%" />
+
   <h1>Pigeon Property Watch</h1>
 
   <p><strong>Finds properties nobody has used for weeks and reports them to Discord, for NoLag Properties and Qbox properties.</strong></p>
