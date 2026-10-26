@@ -2,7 +2,7 @@
 # https://gitlab.com/pigeon-studios/tools/ci-templates
 include:
   - project: pigeon-studios/tools/ci-templates
-    ref: v1.0.0
+    ref: v1.0.1
     file: templates/checks.yml
 
 workflow:
